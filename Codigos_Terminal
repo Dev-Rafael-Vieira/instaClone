@@ -1,0 +1,55 @@
+----
+Comando que inicializa o projeto:
+
+npx react-native init instaClone
+----
+
+----
+Comando para instalar o app no emulador com a versão mais recente
+yarn react-native run-android
+
+----
+
+----
+Comando que adiciona o json-server:
+yarn add jason-server -D
+* o -D serve para instala-lo com o modo de desenvolvimento
+----
+
+----
+Comando que faz o json-server rodar o arquivo server.json:
+yarn json-server server.json -d 3000 -w
+ou
+json-server --watch server.json -d 3000 
+* O comando -d serve para dar um dalay no servidor e o -w para abilitar o modo de reescrita
+----
+
+----
+instala as dependencias:
+yarn add react-navigation react-native-gesture-handler react-native-reanimated
+----
+----
+Acrescentar o codigo existente no guia de instalação existente em:
+no arquivo - MainActivity.java
+https://kmagiera.github.io/react-native-gesture-handler/docs/getting-started.html
+
+----
+
+----
+Adicionando styled componets para estilização:
+yarn add styled-components
+
+----
+Se aparecer esta menssagem de erro :
+`createStackNavigator()` has been moved to `react-navigation-stack`
+rode o comando:
+npm install react-navigation-stack
+e importe a sua dependencia:
+import { createStackNavigator } from 'react-navigation-stack';
+
+----
+Configurando o emulador do Android para enxergar a porta 3000:
+adb reverse tcp:3000 tcp:3000
+~/Android/Sdk/platform-tools/adb  -- se o adb não estiver no path pode ser executado atraves deste caminho
+
+
